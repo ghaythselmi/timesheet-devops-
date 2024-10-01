@@ -23,18 +23,18 @@ public class User implements Serializable {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private Long id;   
-	
-	private String firstName; 
-	
-	private String lastName;
-	
+	private Long id;
+
+	private String firstName;
+
+	private String lastNames;
+
 	@Temporal(TemporalType.DATE)
 	private Date dateNaissance;
-	
+
 	@Enumerated(EnumType.STRING)
-	Role role; 
-	
+	Role role;
+
 	public User() {	}
 
 	public User(String firstName, String lastName, Date dateNaissance, Role role) {
@@ -88,6 +88,6 @@ public class User implements Serializable {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-	
+
 
 }
